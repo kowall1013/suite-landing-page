@@ -5,6 +5,7 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 56px;
 `;
 
 function Header(): JSX.Element {
