@@ -5,6 +5,10 @@ import { Button } from './Buttons';
 const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr;
+
+  @media ${QUERIES.laptopAndUp} {
+    grid-template-columns: 1fr 190px;
+  }
 `;
 
 const GridWrapper = styled.div`
@@ -39,10 +43,14 @@ const Title = styled.p`
     font-size: 5.6rem;
     line-height: 6.4rem;
     letter-spacing: -0.78px;
-    width: calc(100% + 150px);
+    width: calc(100% + 220px);
     z-index: 1;
-    /* width: 140%;
-    z-index: 1; */
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    font-size: 7.2rem;
+    line-height: 7.8rem;
+    letter-spacing: -1px;
   }
 
   span {
@@ -61,6 +69,10 @@ const Title = styled.p`
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+
+    @media ${QUERIES.laptopAndUp} {
+      height: 4rem;
+    }
   }
 `;
 
@@ -71,6 +83,11 @@ const Text = styled.p`
 
   @media ${QUERIES.tabletAndUp} {
     max-width: 80%;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    font-size: 1.8rem;
+    max-width: 85%;
   }
 `;
 
@@ -88,6 +105,13 @@ const ScoreWrapper = styled.div`
   @media ${QUERIES.tabletAndUp} {
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 64px;
   }
 `;
 

@@ -37,7 +37,7 @@ const ImageWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    box-shadow: 0px 0px 30px 100px #ffffff7f;
+    box-shadow: 0px 40px 30px 100px hsla(264, 100%, 69%, 0.3);
   }
 
   &::after {

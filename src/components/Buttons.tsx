@@ -11,6 +11,12 @@ const StyledOutlinedButton = styled.button`
   font-size: 1.4rem;
   cursor: pointer;
   letter-spacing: -0.14px;
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background: ${COLORS.primary};
+    color: ${COLORS.white};
+  }
 `;
 
 const StyledButton = styled.button`
@@ -25,6 +31,24 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background .3s;
+
+  &:hover {
+    background: linear-gradient(
+      130deg,
+      hsl(264deg 100% 69%) 0%,
+      hsl(277deg 100% 69%) 31%,
+      hsl(289deg 100% 68%) 48%,
+      hsl(302deg 100% 68%) 59%,
+      hsl(315deg 100% 67%) 67%,
+      hsl(328deg 100% 67%) 73%,
+      hsl(340deg 100% 67%) 78%,
+      hsl(353deg 100% 66%) 83%,
+      hsl(6deg 100% 66%) 87%,
+      hsl(18deg 100% 65%) 92%,
+      hsl(31deg 100% 65%) 100%
+  );
+  }
 `;
 
 type ButtonProps = {

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import SocialItem from "./SocialItem";
-import { COLORS } from "../constant";
+import { COLORS, QUERIES } from "../constant";
 
 const FooterWrapper = styled.footer`
   display: grid;
@@ -32,6 +32,12 @@ const ContentWrapper = styled.article`
   align-items: center;
   width: max-content;
   gap: 32px;
+
+  @media ${QUERIES.tabletAndUp} {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   p {
     font-size: 1.5rem;
