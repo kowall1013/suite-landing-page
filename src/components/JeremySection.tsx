@@ -3,6 +3,7 @@ import { COLORS, QUERIES } from "../constant";
 
 const Wrapper = styled.section`
   background: ${COLORS.primary};
+  position: relative;
   border-radius: 16px;
   padding: 0 16px 64px 16px;
   margin: 0 -16px;
@@ -14,14 +15,38 @@ const Wrapper = styled.section`
     padding: 0 58px 64px 58px;
   }
 
+  @media ${QUERIES.laptopAndUp} {
+    padding: 0px 124px;
+    height: 545px;
+    transform: translateY(50%);
+    z-index: 1;
+  }
+
 `;
 
 const TranslateSpacer = styled.div`
     transform: translateY(-150px);
+
+    @media ${QUERIES.laptopAndUp} {
+      transform: translateY(0px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 150px;
+      align-items: center;
+    }
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.picture`
   position: relative;
+
+  @media ${QUERIES.laptopAndUp} {
+    transform: translateY(-41px);
+
+    img {
+      height: 589px;
+      object-fit: cover;
+    }
+  }
 
   img {
     margin: 0 auto;
@@ -51,6 +76,16 @@ const ImageWrapper = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+
+    @media ${QUERIES.laptopAndUp} {
+      position: absolute;
+      top: 30%;
+      right: 0;
+      transform: translateX(100px);
+      width: 64px;
+      height: 52px;
+      z-index: 1;
+    }
   }
 `;
 
@@ -58,6 +93,10 @@ const ContentWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${QUERIES.laptopAndUp} {
+    padding: 88px 0;
+  }
 
   h2 {
     font-size: 4rem;
@@ -103,6 +142,7 @@ function JeremySection(): JSX.Element {
     <Wrapper>
       <TranslateSpacer>
         <ImageWrapper>
+          <source srcSet="./assets/image-jeremy-large@2x.png" media={QUERIES.laptopAndUp} />
           <img src="./assets/image-jeremy-small.png" alt="" />
         </ImageWrapper>
         <ContentWrapper>

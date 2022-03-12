@@ -7,23 +7,30 @@ import JeremySection from './components/JeremySection';
 import Footer from './components/Footer';
 
 const Wrapper = styled.div`
-  max-width: 1010px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 24px 16px 80px 16px;
   background-color: ${COLORS.white};
 
   @media ${QUERIES.tabletAndUp} {
-    padding: 40px 40px 72px 40px;
+    padding: 40px 40px 0px 40px;
   }
 `;
+
+const InnerWrapper = styled.div`
+  max-width: 1110px;
+  margin: 0 auto;
+`
 function App(): JSX.Element {
   return (
     <Wrapper>
-      <GlobalStyles />
-      <Header />
-      <SuperSoluctionSection />
-      <JeremySection />
-      <Footer />
+      <InnerWrapper>
+        <GlobalStyles />
+        <Header />
+        <SuperSoluctionSection />
+        <JeremySection />
+        <Footer />
+      </InnerWrapper>
     </Wrapper>
   );
 }

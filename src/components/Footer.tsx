@@ -4,11 +4,22 @@ import { COLORS, QUERIES } from "../constant";
 
 const FooterWrapper = styled.footer`
   display: grid;
+  position: relative;
   padding: 56px 0 80px 0;
   place-items: center;
   position: relative;
   background: ${COLORS.ash};
   margin: 0 -16px;
+
+  @media ${QUERIES.laptopAndUp} {
+    width: 1440px;
+    height: 464px;
+    padding: 0;
+    transform: translateX(-150px);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
 
   &::before {
     --offset: 16px;
@@ -37,6 +48,11 @@ const ContentWrapper = styled.article`
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    justify-content: space-around;
+    margin-bottom: 72px;
   }
 
   p {
